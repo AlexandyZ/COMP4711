@@ -54,6 +54,7 @@ and open the template in the editor.
         
         /* display the sort result */
         foreach ($students as $student){
+            echo '-------------------------------------------';
             echo $student->toString();
         }    
         

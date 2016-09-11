@@ -52,7 +52,7 @@ class Student {
      * @return string The formatting student information
      */
     function toString() {
-        $result = $this->first_name . " " . $this->surname . "\t";
+        $result = strtoupper($this->first_name . " " . $this->surname . "\t");
         $result .= ' (' . $this->average() . ")\n";
         foreach ($this->emails as $which => $what){
             $result .= $which . ': ' . $what . "\n";
