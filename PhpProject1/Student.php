@@ -1,6 +1,6 @@
 <?php
 /**
- * Description of Student
+ * Description of Student including full name, email, and average of grade.
  *
  * @author Alex
  */
@@ -29,8 +29,9 @@ class Student {
         return $total / count($this->grades);
     }
     
+    /* format display */
     function toString() {
-        $result = $this->first_name . ' ' . $this->surname;
+        $result = $this->first_name . " " . $this->surname . "\t";
         $result .= ' (' . $this->average() . ")\n";
         foreach ($this->emails as $which => $what){
             $result .= $which . ': ' . $what . "\n";
@@ -38,5 +39,5 @@ class Student {
         $result .= "\n";
         return '<pre>' . $result . '</pre>';
     }
-
+    
 }
